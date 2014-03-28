@@ -75,6 +75,7 @@ article{
 #survey{
   @extend %absolute_center;
   height: 120px;
+  padding: 10px;
 }
 @media all and (max-width: 800px){
   #survey{
@@ -87,7 +88,7 @@ article{
   font-size: 2.6rem;
   font-weight: 600;
 }
-.yes_btn, .no_btn{
+.btn{
   border: 1px solid lightgrey;
   width: 280px;
   min-width: 210px;
@@ -97,12 +98,7 @@ article{
   font-size: 16px;
   font-rem: 1.6rem;
 }
-.yes_btn:hover{
-//  border: 1px solid royalblue;
-  box-shadow:1px 1px 3px grey;
-}
-.no_btn:hover{
-//  border: 1px solid crimson;
+.btn:hover{
   box-shadow:1px 1px 3px grey;
 }
 #mlogo{

@@ -27,6 +27,6 @@ MezzoeIntro::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
-  #precompile i18n-js
-  config.assets.initialize_on_precompile = true
+  #precompile i18n-js or rake assets precompile
+  #config.assets.initialize_on_precompile = false
 end

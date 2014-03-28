@@ -12,6 +12,7 @@ gem 'compass-rails'
 gem 'haml-rails'
 
 gem 'i18n-js'
+gem "i18n-js-pika", require: "i18n-js"
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

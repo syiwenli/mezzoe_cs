@@ -2,27 +2,34 @@ en:
   hello: 'hey'
   nono: 'No'
   yesyes: 'Yes'
+  test: '10'
   survey:
     questions:
       start_question:
-        question_1: 'Do you spend most of your free time by yourself?'
-        question_2: 'Do you hang out with your friends on a weekly basis?'
+        question_1:     'Do you spend most of your free time by yourself?'
+        question_2:     'Do you hang out with your friends on a weekly basis?'
       yes_to_1:
-        question_11: 'Do you watch a lot of TV or Netflix or Youtube?'
+        question_11:    'Do you watch a lot of TV or Netflix or Youtube?'
       no_to_1:
-        question_10: 'start_questions.question_2'
+        question_10:    'question_2'
       yes_to_2:
-        question_21:  'fin_question'
+        question_21:    'fin_question'
       no_to_2:
-        question_21:  'fin_question'
+        question_20:    'fin_question'
       yes_to_11:
-        question_111: 'Are you interested in doing something else?'
+        question_111:   'Are you interested in doing something else?'
       no_to_11:
-        question_110: 'fin_question'
+        question_110:   'fin_question'
       yes_to_111:
-        question_1111: 'fin_question'
+        question_1111:  'fin_question'
       no_to_111:
-        question_1110: 'fin_negative'
-      fin_question: 'Would you like to meet new friends that shares similar interests with you?'
+        question_1110:  'fin_negative'
+      fin_question:     'Would you like to meet new friends that shares similar interests with you?'
+      yes_to_fin:
+        question_fin1:  'sign_up'
+      no_to_fin:
+        question_fin0:  'fin_negative'
+
+
       fin_negative: 'Mezzoe is probably not for you. Still interested?'
       sign_up: 'Enter your email address to get early access.'

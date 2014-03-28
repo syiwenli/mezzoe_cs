@@ -4,8 +4,8 @@
     #intro.rounded.shadow
 
       #survey
-        .question{id: "question_#{@init.first}"}
+        .question{id: @init.first}
           = @init.last
-        = submit_tag t('nono'), {class: 'no_btn'}
-        = submit_tag t('yesyes'), {class: 'yes_btn'}
+        = submit_tag t('nono'), {class: 'btn'}
+        = submit_tag t('yesyes'), {class: 'btn'}
 

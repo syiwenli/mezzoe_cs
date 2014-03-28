@@ -127,6 +127,8 @@ GEM
     i18n (0.6.9)
     i18n-js (2.1.2)
       i18n
+    i18n-js-pika (3.0.0.rc9)
+      i18n (~> 0.6)
     jar_wrapper (0.1.8)
       zip
     jasmine (2.0.0)
@@ -310,6 +312,7 @@ DEPENDENCIES
   guard-spork
   haml-rails
   i18n-js
+  i18n-js-pika
   jasmine
   jquery-rails
   pg
