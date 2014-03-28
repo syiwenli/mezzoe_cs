@@ -11,6 +11,8 @@ gem 'sass-rails'
 gem 'compass-rails'
 gem 'haml-rails'
 
+gem 'i18n-js'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
@@ -23,25 +25,31 @@ gem 'uglifier', '>= 1.3.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-#gem 'turbolinks'
-
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-#gem 'jbuilder', '~> 1.2'
-#
-#group :doc do
-#  # bundle exec rake doc:rails generates the API under doc/api.
-#  gem 'sdoc', require: false
-#end
-
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
+group :development, :test do
+  gem 'sqlite3'
+  gem 'brakeman'
+  gem 'capybara'
+  gem 'capybara-mechanize'
+  gem 'capybara-firebug'
+  gem 'cucumber'
+  gem 'cucumber-rails', :require => false
+  #gem 'ruby-debug' isn't maintained
+  gem 'byebug'
+  gem 'debugger'
+  gem 'guard'
+  gem 'guard-spork'
+  gem 'jasmine'
+  gem 'pry'
+  gem 'pry-debugger'
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'selenium'
+  gem 'selenium-client'
+  gem 'selenium-webdriver'
+  #gem 'rcov' doesn't work for ruby 1.9+
+  gem 'simplecov', :require => false
+  gem 'sinatra'
+  gem 'spork', '~> 1.0rc'
+  gem 'spork-rails'
+  gem 'webrat'
+end

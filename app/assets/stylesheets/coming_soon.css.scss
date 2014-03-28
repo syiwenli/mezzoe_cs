@@ -1,0 +1,117 @@
+@import "compass/css3";
+@import "compass/reset";
+
+$mo-width:950px;
+$mo-width-compact:550px;
+$mo-width-compact-frame:588px;
+$mo-width-phone-portrait:320px;
+$mo-width-phone-landscape:480px;
+$mo-width-tablet-portrait:758px;
+$mo-width-tablet-landscape:950px;
+$mo-width-desktop-default:950px;
+$mo-width-desktop-large:1200px;
+$mo-width-desktop-compact:530px;
+$mezzo-bg-color: #f1f2f2;
+$mezzo-max-width: 880px;
+$mezzo-min-width: 600px;
+$mezzo-sidebar: #d6d9da;
+$mezzo-topbar-height: 36px;
+$mu-min-side: 180px;
+$mezzo-font: #0a0a0a;
+$mezzo-title-fsize: 18px;
+$mezzo-name-fsize: 12.5px;
+$mezzo-link-color: #4d54e4;
+$mezzo-link-hover: #e03251;
+$mezzo-border-radius: 6px;
+$mo-top-nav-side-padding: 26px;
+$mo-tab-min-width: 520px;
+$mo-user-width: 160px;
+$mo-user-height: 188px;
+
+%absolute_center{
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+}
+html{
+  font-size: 62.5%;
+}
+body{
+  color: $mezzo-font;
+  font-family: Raleway, Arial, Helvetica, sans-serif;
+  height: 100%;
+  background-image: url("SplitShire_IMG_4657.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  a{
+    color: $mezzo-link-color;
+    text-decoration: none;
+  }
+  a:hover {
+    color: $mezzo-link-hover;
+  }
+}
+article{
+  text-align: center;
+}
+
+#intro{
+  @extend %absolute_center;
+  height: 60%;
+  width: 60%;
+  min-height: 300px;
+  min-width: 300px;
+  vertical-align: middle;
+  background-color: whitesmoke;
+  opacity: 0.8;
+  border: 1px solid lightgrey;
+  padding: 10px;
+}
+#survey{
+  @extend %absolute_center;
+  height: 120px;
+}
+@media all and (max-width: 800px){
+  #survey{
+    height: 280px;
+    padding: 10px;
+  }
+}
+.question{
+  font-size: 26px;
+  font-size: 2.6rem;
+  font-weight: 600;
+}
+.yes_btn, .no_btn{
+  border: 1px solid lightgrey;
+  width: 280px;
+  min-width: 210px;
+  height: 45px;
+  cursor: pointer;
+  margin: 45px 10px 0;
+  font-size: 16px;
+  font-rem: 1.6rem;
+}
+.yes_btn:hover{
+//  border: 1px solid royalblue;
+  box-shadow:1px 1px 3px grey;
+}
+.no_btn:hover{
+//  border: 1px solid crimson;
+  box-shadow:1px 1px 3px grey;
+}
+#mlogo{
+  @extend %absolute_center;
+
+}
+.rounded{
+  border-radius: $mezzo-border-radius;
+}
+.shadow{
+  box-shadow:1px 1px 3px lightgrey;
+}

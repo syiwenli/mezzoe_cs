@@ -1,0 +1,11 @@
+%article
+  %section
+    = image_tag 'mezzoeii.png', {id: 'mlogo'}
+    #intro.rounded.shadow
+
+      #survey
+        .question{id: "question_#{@init.first}"}
+          = @init.last
+        = submit_tag t('nono'), {class: 'no_btn'}
+        = submit_tag t('yesyes'), {class: 'yes_btn'}
+

@@ -19,7 +19,7 @@ development:
   encoding: unicode
   database: mezzoe_intro_development
   pool: 5
-  username: mezzoe_intro
+  username: evienne
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -48,7 +48,7 @@ test:
   encoding: unicode
   database: mezzoe_intro_test
   pool: 5
-  username: mezzoe_intro
+  username: evienne
   password:
 
 production:
@@ -56,5 +56,5 @@ production:
   encoding: unicode
   database: mezzoe_intro_production
   pool: 5
-  username: mezzoe_intro
+  username: evienne
   password:
