@@ -2,10 +2,12 @@ class UsersController < ApplicationController
 
   def index
     @init = Survey::Questions.start_question
+    @user = User.new
   end
 
   def create
     @user = User.new(user_params)
+
     if @user.save
       redirect_to root_path, notice: 'Thanks for joining the waitlist!'
     else
@@ -14,7 +16,7 @@ class UsersController < ApplicationController
   end
 
   private
-  def event_params
+  def user_params
     params.require(:user).permit(:email, :survey)
   end
 

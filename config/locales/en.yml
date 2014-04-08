@@ -3,6 +3,8 @@ en:
   nono: 'No'
   yesyes: 'Yes'
   test: '10'
+  email_placeholder:    'Enter your email to get early access.'
+  email_submit:         'Get on the Waitlist'
   survey:
     questions:
       start_question:
@@ -24,12 +26,15 @@ en:
         question_1111:  'fin_question'
       no_to_111:
         question_1110:  'fin_negative'
-      fin_question:     'Would you like to meet new friends that shares similar interests with you?'
+      fin_question:     'Would you like to meet new friends who share similar interests with you?'
       yes_to_fin:
-        question_fin1:  'sign_up'
+        question_fin1:  'fin_positive'
       no_to_fin:
         question_fin0:  'fin_negative'
-
-
-      fin_negative: 'Mezzoe is probably not for you. Still interested?'
-      sign_up: 'Enter your email address to get early access.'
+      fin_negative:     'Mezzoe is probably not for you. Still interested?'
+      fin_positive:     'Coming soon - a new social network - tailored for you.'
+  activemodel:
+    user:
+      error:
+        required:     'Please fill out your email if you would like to get on the waitlist.'
+        email:        'Please enter a valid email address.'

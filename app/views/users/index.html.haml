@@ -1,5 +1,5 @@
 %article
-  %section
+  %section#landing
     = image_tag 'mezzoeii.png', {id: 'mlogo'}
     #intro.rounded.shadow
 
@@ -8,4 +8,13 @@
           = @init.last
         = submit_tag t('nono'), {class: 'btn'}
         = submit_tag t('yesyes'), {class: 'btn'}
+        = hidden_field_tag "q_and_a"
+        #coming_soon.hidden
+          = form_for @user do |f|
+            = f.hidden_field :survey
+            %label.error#email_error{for: "user_email"}
+            = f.text_field :email, type: 'email', placeholder: t('email_placeholder')
+            = f.submit t('email_submit'), id: 'submit_email'
+
+
 

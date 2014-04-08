@@ -14,5 +14,8 @@
     - if content_for?(:header)
       %header= yield :header
     = yield
+    -# use cdn to load jquery
+    -#= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"
     = javascript_include_tag "application"
+    = javascript_include_tag "http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"
 

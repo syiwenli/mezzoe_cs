@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.0.4'
+
 gem 'figaro'
 
 # Use postgresql as the database for Active Record

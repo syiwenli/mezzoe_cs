@@ -27,6 +27,9 @@ $mo-top-nav-side-padding: 26px;
 $mo-tab-min-width: 520px;
 $mo-user-width: 160px;
 $mo-user-height: 188px;
+$mo-btn-width: 280px;
+$mo-email-width: 380px;
+
 
 %absolute_center{
   margin: auto;
@@ -36,18 +39,24 @@ $mo-user-height: 188px;
   left: 0;
   position: absolute;
 }
+
+//-------------------------------
+
 html{
+
   font-size: 62.5%;
 }
 body{
   color: $mezzo-font;
   font-family: Raleway, Arial, Helvetica, sans-serif;
   height: 100%;
-  background-image: url("SplitShire_IMG_4657.jpg");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
+  font-size: 12px;
+  font-size: 1.2rem;
+//  background-image: url("SplitShire_IMG_4657.jpg");
+//  background-attachment: fixed;
+//  background-repeat: no-repeat;
+//  background-position: center top;
+//  background-size: cover;
   a{
     color: $mezzo-link-color;
     text-decoration: none;
@@ -58,6 +67,70 @@ body{
 }
 article{
   text-align: center;
+}
+input{
+  padding: 0;
+}
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+  margin-top:-2px;
+  margin-bottom: -2px;
+}
+
+//--------------- shared ---------------------
+
+.hidden{
+  display: none;
+}
+.show_inline{
+  display: inline-block;
+}
+.rounded{
+  border-radius: $mezzo-border-radius;
+}
+
+.shadow{
+  box-shadow:1px 1px 3px lightgrey;
+}
+
+
+//--------------- on focus, hide input placeholder --------------------
+
+/* WebKit browsers */
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder{
+  color:transparent;
+}
+
+/* Mozilla Firefox 4 to 18 */
+input:focus:-moz-placeholder, textarea:focus:-moz-placeholder{
+  color:transparent;
+}
+
+/* Mozilla Firefox 19+ */
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder{
+  color:transparent;
+}
+
+/* Internet Explorer 10+ */
+input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder{
+  color:transparent;
+}
+
+//------------------------------------
+
+#landing{
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("SplitShire_IMG_4657.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
 }
 
 #intro{
@@ -72,22 +145,58 @@ article{
   border: 1px solid lightgrey;
   padding: 10px;
 }
+
 #survey{
   @extend %absolute_center;
   height: 120px;
   padding: 10px;
 }
+
 @media all and (max-width: 800px){
   #survey{
     height: 280px;
     padding: 10px;
   }
 }
+
 .question{
   font-size: 26px;
   font-size: 2.6rem;
   font-weight: 600;
 }
+
+#coming_soon{
+  margin-top: 45px;
+}
+
+#email_error{
+  display: block;
+  color: darkred;
+  text-align: left;
+  font-size: 16px;
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+}
+
+#user_email{
+  border: 1px solid lightgrey;
+  height: 40px;
+  width: $mo-email-width;
+  font-size: 21px;
+  font-rem: 2.1rem;
+  vertical-align: bottom;
+  display: inline-block;
+}
+
+#submit_email{
+  cursor: pointer;
+  border: 1px solid lightgrey;
+  height: 42px;
+  width: 180px;
+  font-size: 16px;
+  font-rem: 1.6rem;
+}
+
 .btn{
   border: 1px solid lightgrey;
   width: 280px;
@@ -98,16 +207,12 @@ article{
   font-size: 16px;
   font-rem: 1.6rem;
 }
+
 .btn:hover{
   box-shadow:1px 1px 3px grey;
 }
+
 #mlogo{
   @extend %absolute_center;
+}
 
-}
-.rounded{
-  border-radius: $mezzo-border-radius;
-}
-.shadow{
-  box-shadow:1px 1px 3px lightgrey;
-}
