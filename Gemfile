@@ -28,30 +28,11 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 
 group :development, :test do
-  gem 'sqlite3'
-  gem 'brakeman'
-  gem 'capybara'
-  gem 'capybara-mechanize'
-  gem 'capybara-firebug'
-  gem 'cucumber'
-  gem 'cucumber-rails', :require => false
-  #gem 'ruby-debug' isn't maintained
   gem 'byebug'
   gem 'debugger'
-  gem 'guard'
-  gem 'guard-spork'
   gem 'jasmine'
   gem 'pry'
   gem 'pry-debugger'
   gem 'rspec'
   gem 'rspec-rails'
-  gem 'selenium'
-  gem 'selenium-client'
-  gem 'selenium-webdriver'
-  #gem 'rcov' doesn't work for ruby 1.9+
-  gem 'simplecov', :require => false
-  gem 'sinatra'
-  gem 'spork', '~> 1.0rc'
-  gem 'spork-rails'
-  gem 'webrat'
 end

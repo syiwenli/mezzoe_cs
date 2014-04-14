@@ -2,7 +2,10 @@
   %section#landing
     = image_tag 'mezzoeii.png', {id: 'mlogo'}
     #intro.rounded.shadow
-
+      - if notice || alert
+        #notice
+          = notice || alert
+          = t('contact_html')
       #survey
         .question{id: @init.first}
           = @init.last

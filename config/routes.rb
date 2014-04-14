@@ -6,6 +6,8 @@ MezzoeIntro::Application.routes.draw do
   resources :users, :except => [:edit, :update, :destroy]
   root 'users#index'
 
+  get 'email_exists'        => 'users#exists'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

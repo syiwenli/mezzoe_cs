@@ -29,6 +29,7 @@ $mo-user-width: 160px;
 $mo-user-height: 188px;
 $mo-btn-width: 280px;
 $mo-email-width: 380px;
+$mo-email-small-width: 280px;
 
 
 %absolute_center{
@@ -159,6 +160,25 @@ input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder{
   }
 }
 
+#notice{
+  font-size: 20px;
+  font-rem: 2.0rem;
+  font-weight: 600;
+  position: relative;
+  top: 50%;
+  height: 50px;
+  margin-top: -25px;
+}
+
+@media all and (max-width: 640px) {
+  #notice{
+    height: 100px;
+    margin-top: -50px;
+  }
+
+}
+
+
 .question{
   font-size: 26px;
   font-size: 2.6rem;
@@ -195,6 +215,19 @@ input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder{
   width: 180px;
   font-size: 16px;
   font-rem: 1.6rem;
+}
+
+@media all and (max-width: 640px){
+  #new_user, #submit_email{
+    width: $mo-email-small-width;
+  }
+  #user_email{
+    width: $mo-email-small-width;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+
 }
 
 .btn{

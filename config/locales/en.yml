@@ -5,6 +5,10 @@ en:
   test: '10'
   email_placeholder:    'Enter your email to get early access.'
   email_submit:         'Get on the Waitlist'
+  retake_test:          'Would you like to retake the test?'
+  thanks:               'Thank you for joining the waitlist.'
+  uh_oh:                'Uh oh. Something went wrong. Please try again later.'
+  contact_html:         '<a href="mailto:hi.mezzoe@gmail.com">Contact us</a> if you are interested in helping out.'
   survey:
     questions:
       start_question:
@@ -31,10 +35,12 @@ en:
         question_fin1:  'fin_positive'
       no_to_fin:
         question_fin0:  'fin_negative'
-      fin_negative:     'Mezzoe is probably not for you. Still interested?'
+      fin_negative:     'Coming soon, we will have something to offer you.'
       fin_positive:     'Coming soon - a new social network - tailored for you.'
   activemodel:
     user:
       error:
-        required:     'Please fill out your email if you would like to get on the waitlist.'
-        email:        'Please enter a valid email address.'
+        email:
+          required:     'Please fill out your email if you would like to get on the waitlist.'
+          format:       'Please enter a valid email address.'
+          unique:       'Hi there, looks like you are already on the waitlist.'
