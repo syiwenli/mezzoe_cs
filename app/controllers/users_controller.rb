@@ -15,7 +15,6 @@ class UsersController < ApplicationController
         redirect_to root_path, alert: I18n.t('activemodel.user.error.email.unique')
       end
     rescue => e
-      #TODO: set up logger debug
       logger.debug "Exception: #{e.inspect} \n #{e.backtrace}"
       redirect_to root_path, alert: I18n.t('uh_oh')
     end

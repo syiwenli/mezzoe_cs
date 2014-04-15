@@ -28,9 +28,8 @@ var MEZZOE = (function(){
         return $(btn).val().toLowerCase();
     },
 
-    get_question_id = function get_question_id(btn){
-        var question = $(btn).siblings('.question');
-        return question.attr('id');
+    get_question_id = function get_question_id(){
+        return $questionDiv.attr('id');
     },
 
     show_next_question = function next_question(answer, previous_id){
@@ -61,7 +60,7 @@ var MEZZOE = (function(){
     select_answer = function select_answer(){
         $surveyBox.on('click', '.btn', function(){
             answer = get_answer(this);
-            previous_id = get_question_id(this);
+            previous_id = get_question_id();
             show_next_question(answer, previous_id);
             $qAndA.data(previous_id, answer);
 
