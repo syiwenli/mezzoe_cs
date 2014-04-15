@@ -5,8 +5,18 @@ class User < ActiveRecord::Base
   #/\A[\w\+\-\=\.]+@[a-z\d][\w\-]*(\.[a-z\d]\w*)*\.[a-z]{2,}\z/i,
   validates :email, format: { with: /\A[\w\+\-\=\.]+@[a-z\d][\w\-]*\.[a-z]{2,}\z/i,
                               message: I18n.t('activemodel.user.error.email.format')}
-  validates :email, uniqueness: true
+  validates :email, uniqueness: {message: I18n.t('activemodel.user.error.email.unique')}
 
+  def prepare_user(survey_param)
+    #to ensure email is unique since psql is case insensitive
+    self.email = self.email.try(:downcase)
+    if User.exists?(email: self.email)
+      false
+    else
+      self.survey = data_to_hash(survey_param)
+      true
+    end
+  end
 
   def data_to_hash(survey)
     #input = "{2=> yes}{fin=> yes}"
@@ -24,7 +34,5 @@ class User < ActiveRecord::Base
     end
     survey_data
   end
-
-
 
 end

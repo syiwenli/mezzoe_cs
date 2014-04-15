@@ -160,7 +160,7 @@ input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder{
   }
 }
 
-#notice{
+.notice{
   font-size: 20px;
   font-rem: 2.0rem;
   font-weight: 600;
@@ -171,7 +171,7 @@ input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder{
 }
 
 @media all and (max-width: 640px) {
-  #notice{
+  .notice{
     height: 100px;
     margin-top: -50px;
   }

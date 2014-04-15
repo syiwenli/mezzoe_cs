@@ -8,20 +8,18 @@ class UsersController < ApplicationController
   def create
     begin
       @user = User.new(user_params)
-      #to ensure email is unique since psql is case insensitive
-      @user.email.downcase!
-      @user.survey = @user.data_to_hash(params["user"]["survey"])
-      unless @user.valid?
-        redirect_to root_path, alert: I18n.t('activemodel.user.error.email.unique') and return
-      end
-      if @user.save
+      if @user.prepare_user(params["user"]["survey"])
+        @user.save
         redirect_to root_path, notice: I18n.t('thanks')
       else
-        redirect_to root_path, alert: I18n.t('uh_oh')
+        redirect_to root_path, alert: I18n.t('activemodel.user.error.email.unique')
       end
     rescue => e
-      Rails.logger.debug "Exception: #{e.inspect} \n #{e.backtrace}"
+      #TODO: set up logger debug
+      logger.debug "Exception: #{e.inspect} \n #{e.backtrace}"
+      redirect_to root_path, alert: I18n.t('uh_oh')
     end
+
   end
 
   private

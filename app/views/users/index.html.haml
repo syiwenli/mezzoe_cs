@@ -3,9 +3,12 @@
     = image_tag 'mezzoeii.png', {id: 'mlogo'}
     #intro.rounded.shadow
       - if notice || alert
-        #notice
+        .notice
           = notice || alert
           = t('contact_html')
+      - if flash[:error]
+        .notice
+          = flash[:error]
       #survey
         .question{id: @init.first}
           = @init.last
