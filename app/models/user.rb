@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   #/\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
   #\A[\w\+\-\=\.]+@[a-z\d][\w\-]*\.[a-z]{2,}\z
   #/\A[\w\+\-\=\.]+@[a-z\d][\w\-]*(\.[a-z\d]\w*)*\.[a-z]{2,}\z/i,
-  validates :email, format: { with: /\A[\w\+\-\=\.]+@[a-z\d][\w\-]*\.[a-z]{2,}\z/i,
+  validates :email, format: { with: /\A[\w\+\-\=\.]+@[a-z\d][\w\-]*\.[a-z]{2,4}\z/i,
                               message: I18n.t('activemodel.user.error.email.format')}
   validates :email, uniqueness: {message: I18n.t('activemodel.user.error.email.unique')}
 

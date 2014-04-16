@@ -2,13 +2,10 @@
   %section#landing
     = image_tag 'mezzoeii.png', {id: 'mlogo'}
     #intro.rounded.shadow
-      - if notice || alert
+      - if notice
         .notice
-          = notice || alert
+          = notice
           = t('contact_html')
-      - if flash[:error]
-        .notice
-          = flash[:error]
       #survey
         .question{id: @init.first}
           = @init.last
@@ -19,6 +16,7 @@
           = form_for @user do |f|
             = f.hidden_field :survey
             %label.error#email_error{for: "user_email"}
+              = alert
             = f.text_field :email, type: 'email', placeholder: t('email_placeholder')
             = f.submit t('email_submit'), id: 'submit_email'
 

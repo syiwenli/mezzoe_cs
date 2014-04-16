@@ -9,16 +9,18 @@ class UsersController < ApplicationController
     begin
       @user = User.new(user_params)
       if @user.prepare_user(params["user"]["survey"])
-        @user.save
-        redirect_to root_path, notice: I18n.t('thanks')
+        if @user.save
+          redirect_to root_path, notice: I18n.t('thanks')
+        else
+          redirect_to root_path, alert: @user.errors.messages[:email].first
+        end
       else
-        redirect_to root_path, alert: I18n.t('activemodel.user.error.email.unique')
+        redirect_to root_path, notice: I18n.t('activemodel.user.error.email.unique')
       end
     rescue => e
       logger.debug "Exception: #{e.inspect} \n #{e.backtrace}"
-      redirect_to root_path, alert: I18n.t('uh_oh')
+      redirect_to root_path, notice: I18n.t('uh_oh')
     end
-
   end
 
   private
