@@ -8,16 +8,17 @@ describe UsersController do
   }}
 
   describe "GET index" do
-    it "assigns all events as @events" do
+    it "assigns initial question and user" do
       get :index, {}
       assigns(:user).should be_a_new(User)
+      assigns(:init).should be_a(Array)
     end
   end
 
   describe "POST create" do
 
     describe "with valid params" do
-      it "creates a new Event" do
+      it "creates a new User" do
         expect {
           post :create, valid_params
         }.to change(User, :count).by(1)
