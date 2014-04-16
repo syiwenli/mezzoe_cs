@@ -42,7 +42,7 @@ describe UsersController do
         User.any_instance.stub(:prepare_user).and_return(false)
         post :create, valid_params
         response.should redirect_to root_path
-        flash[:alert].should eq(I18n.t('activemodel.user.error.email.unique'))
+        flash[:notice].should eq(I18n.t('activemodel.user.error.email.unique'))
       end
     end
 
@@ -51,7 +51,7 @@ describe UsersController do
         User.any_instance.stub(:save).and_raise("error")
         post :create, {}
         response.should redirect_to root_path
-        flash[:alert].should eq(I18n.t('uh_oh'))
+        flash[:notice].should eq(I18n.t('uh_oh'))
       end
     end
   end
